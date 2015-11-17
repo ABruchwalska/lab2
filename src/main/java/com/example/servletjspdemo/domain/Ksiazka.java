@@ -1,30 +1,44 @@
 package com.example.servletjspdemo.domain;
 
 public class Ksiazka {
-	
-	private String autor = "unknown";
-	private String tytul = "unknown";
-	
-	public Ksiazka() {
-		super();
-	}
-	
-	public Ksiazka(String Autor, String Tytul) {
-		super();
-		this.autor = Autor;
-		this.tytul = Tytul;
-	}
+private String tytul;
+private String autor;
+private String kategoria;
+private int rokWydania;
 
-	public String getAutor() {
-		return autor;
-	}
-	public void setAutor(String Autor) {
-		this.autor = Autor;
-	}
-	public String getTytul() {
-		return tytul;
-	}
-	public void setTytul(String Tytul) {
-		this.tytul = Tytul;
-	}
+public Ksiazka(){
+super();
+}
+public Ksiazka(String tytul, String autor, String kategoria, int rokWydania){
+this.tytul = tytul;
+this.autor = autor;
+this.kategoria = kategoria;
+this.rokWydania = rokWydania;
+
+}
+public String gettytul(){
+return tytul;
+}
+public void settytul(String tytul){
+this.tytul = tytul;
+}
+public String getautor(){
+return autor;
+}
+public void setautor(String autor){
+this.autor = autor;
+}
+public String getkategoria(){
+return kategoria;
+}
+public void setkategoria(String kategoria){
+this.kategoria = kategoria;
+}
+public int getrokWydania(){
+return rokWydania;
+}
+public void setrokWydania(int rokWydania){
+this.rokWydania = rokWydania;
+}
+
 }
