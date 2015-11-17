@@ -10,7 +10,7 @@ public class StorageService {
 	private List<Ksiazka> db = new ArrayList<Ksiazka>();
 	
 	public void add(Ksiazka Ksiazka){
-		Ksiazka newKsiazka = new Ksiazka(Ksiazka.getAutor(), Ksiazka.getTytul());
+		Ksiazka newKsiazka = new Ksiazka(Ksiazka.getTytul(), Ksiazka.getAutor(),Ksiazka.getKategoria(), Ksiazka.getRokWydania() );
 		db.add(newKsiazka);
 	}
 	

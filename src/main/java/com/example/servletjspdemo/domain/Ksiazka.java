@@ -16,28 +16,28 @@ this.kategoria = kategoria;
 this.rokWydania = rokWydania;
 
 }
-public String gettytul(){
+public String getTytul(){
 return tytul;
 }
-public void settytul(String tytul){
+public void setTytul(String tytul){
 this.tytul = tytul;
 }
-public String getautor(){
+public String getAutor(){
 return autor;
 }
-public void setautor(String autor){
+public void setAutor(String autor){
 this.autor = autor;
 }
-public String getkategoria(){
+public String getKategoria(){
 return kategoria;
 }
-public void setkategoria(String kategoria){
+public void setKategoria(String kategoria){
 this.kategoria = kategoria;
 }
-public int getrokWydania(){
+public int getRokWydania(){
 return rokWydania;
 }
-public void setrokWydania(int rokWydania){
+public void setRokWydania(int rokWydania){
 this.rokWydania = rokWydania;
 }
 
