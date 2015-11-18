@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/form")
-public class FormServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/ankieta")
+public class AnkietaServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -24,10 +24,10 @@ public class FormServlet extends HttpServlet {
 		out.println("<html><body><h2>Krótka ankieta</h2>" +
 				"<form action='data'>" +
 				"Autor: <input type='text' name='autor' /> <br />" +
-				"<input type='checkbox' name='rodzaj' value='horror'>Lubię horrory<br />" +
-				"<input type='checkbox' name='rodzaj' value='obyczajowa'>Lubię obyczajowe<br />" +
-				"<input type='checkbox' name='rodzaj' value='kryminał'>Lubię kryminały<br />" +
-				"<input type='checkbox' name='rodzaj' value='romans'>Lubię romanse<br />" +
+				"<input type='checkbox' name='kategoria' value='horror'>Lubię horrory<br />" +
+				"<input type='checkbox' name='kategoria' value='obyczajowa'>Lubię obyczajowe<br />" +
+				"<input type='checkbox' name='kategoria' value='kryminał'>Lubię kryminały<br />" +
+				"<input type='checkbox' name='kategoria' value='romans'>Lubię romanse<br />" +
 				"<input type='submit' value=' OK ' />" +
 				"</form>" +
 				"</body></html>");
