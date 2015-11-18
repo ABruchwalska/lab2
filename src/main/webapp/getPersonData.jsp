@@ -13,8 +13,8 @@
 
 <form action="addPerson.jsp">
 
-  Author :<input type="text" name="Autor" value="${Ksiazka.autor}" /><br />
-  Title :<input type="text"  name="Tytul" value="${Ksiazka.tytul}" /><br />
+  Autor :<input type="text" name="autor"/><br />
+  Tytul :<input type="text"  name="tytul"/><br />
   <input type="submit" value=" OK ">
   
 </form>
