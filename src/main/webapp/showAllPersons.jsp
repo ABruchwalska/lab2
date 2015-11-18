@@ -9,9 +9,9 @@
 </head>
 <body>
 
-<jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
+<jsp:useBean id="storage" class="com.example.servletjspdemo.service.KsiazkaStorage" scope="application" />
 <%
-  for (Ksiazka Ksiazka : storage.getAllKsiazkas()) {
+  for (Ksiazka ksiazka : tabOb.add(ksiazka)) {
 	  out.println("<p>Autor: " + Ksiazka.getAutor() + "; Tytul: " + Ksiazka.getTytul() + "</p>");
   }
 %>

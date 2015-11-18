@@ -11,10 +11,10 @@
 
 <jsp:setProperty name="Ksiazka" property="*" /> 
 
-<jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
+<jsp:useBean id="storage" class="com.example.servletjspdemo.service.KsiazkaStorage" scope="application" />
 
 <% 
-  storage.add(Ksiazka);
+  storage.dodajKsiazka(Ksiazka);
 %>
 
 <p>Podana ksiazka zostala dodana do biblioteki: </p>

@@ -26,8 +26,8 @@ public class DataServlet extends HttpServlet {
 		for (String kategoria : request.getParameterValues("kategoria")) {
 			selectedKategoria += kategoria + " ";
 		}
-		out.println("<html><body><h2>Twoja odpowiedź</h2>" +
-				"<p>Autor: " + request.getParameter("Autor") + "<br />" +
+		out.println("<html><body><h2>Twoja odpowiedz</h2>" +
+				"<p>Autor: " + request.getParameter("wypelniajacy") + "<br />" +
 				"<p>Ulubiony kategoria ksiazki: " + selectedKategoria + "<br />" +
 				"</body></html>");
 		out.close();

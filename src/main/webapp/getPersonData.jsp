@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>title</title>
+<title>Ksiegarnia</title>
 </head>
 <body>
 
-<jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
+<jsp:useBean id="storage" class="com.example.servletjspdemo.service.KsiazkaStorage" scope="application" />
 <jsp:useBean id="Ksiazka" class="com.example.servletjspdemo.domain.Ksiazka" scope="session" />
 
 <form action="addPerson.jsp">

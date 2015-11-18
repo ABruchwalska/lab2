@@ -23,7 +23,7 @@ public class AnkietaServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println("<html><body><h2>Krótka ankieta</h2>" +
 				"<form action='data'>" +
-				"Autor: <input type='text' name='autor' /> <br />" +
+				"Autor: <input type='text' name='wypelniajacy' /> <br />" +
 				"<input type='checkbox' name='kategoria' value='horror'>Lubię horrory<br />" +
 				"<input type='checkbox' name='kategoria' value='obyczajowa'>Lubię obyczajowe<br />" +
 				"<input type='checkbox' name='kategoria' value='kryminał'>Lubię kryminały<br />" +
