@@ -28,7 +28,7 @@ public class DataServlet extends HttpServlet {
 		}
 		out.println("<html><body><h2>Twoja odpowiedz</h2>" +
 				"<p>Autor: " + request.getParameter("wypelniajacy") + "<br />" +
-				"<p>Ulubiony kategoria ksiazki: " + selectedKategoria + "<br />" +
+				"<p>Ulubiona kategoria ksiazki: " + selectedKategoria + "<br />" +
 				"</body></html>");
 		out.close();
 	}
