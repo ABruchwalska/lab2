@@ -18,8 +18,8 @@
 %>
 
 <p>Podana ksiazka zostala dodana do biblioteki: </p>
-<p>Autor: ${Ksiazka.autor} </p>
-<p>Tytul: <jsp:getProperty name="Ksiazka" property="Tytul"></jsp:getProperty></p>
+<p>Autor: <jsp:getProperty name="Ksiazka" property="autor"></jsp:getProperty> </p>
+<p>Tytul: <jsp:getProperty name="Ksiazka" property="tytul"></jsp:getProperty></p>
 <p>
   <a href="showAllKsiazkas.jsp">Pokaz wszystkie ksiazki</a>
 </p>
