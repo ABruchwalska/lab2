@@ -22,13 +22,13 @@ public class DataServlet extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		
-		String selectedRodzaj = "";
-		for (String rodzaj : request.getParameterValues("rodzaj")) {
-			selectedRodzaj += rodzaj + " ";
+		String selectedKategoria = "";
+		for (String kategoria : request.getParameterValues("kategoria")) {
+			selectedKategoria += kategoria + " ";
 		}
 		out.println("<html><body><h2>Twoja odpowiedź</h2>" +
 				"<p>Autor: " + request.getParameter("Autor") + "<br />" +
-				"<p>Ulubiony rodzaj ksiazki: " + selectedRodzaj + "<br />" +
+				"<p>Ulubiony kategoria ksiazki: " + selectedKategoria + "<br />" +
 				"</body></html>");
 		out.close();
 	}
