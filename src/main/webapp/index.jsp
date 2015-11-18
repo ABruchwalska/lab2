@@ -9,8 +9,8 @@
     </head>
     <body>
         <h2>Ksiegarnia</h2>
-        <p><a href="hello">See greetings from servlet</a></p>
-        <p><a href="form">Fill a form</a></p>
+        <p><a href="hello">Powitanie</a></p>
+        <p><a href="ankieta">Wypelnij ankiete ;)</a></p>
         <p><a href="getPersonData.jsp">Uzupełnij pola</a></p>
     </body>
 </html>
