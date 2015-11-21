@@ -10,10 +10,17 @@ public KsiazkaStorage(){
 }
 public void dodajKsiazka(Ksiazka ksiazka){
 	System.out.println(ksiazka);
-	tabOb.add(new Ksiazka(ksiazka.getTytul(),ksiazka.getAutor()));
+	tabOb.add(new Ksiazka(tabOb.size(), ksiazka.getTytul(),ksiazka.getAutor()));
 }
 public void usunPozycje(int pozycja){
 tabOb.remove(pozycja);
+	reorganizeId();
+}
+private void reorganizeId() {
+	for(int i = 0; i < tabOb.size() ; i++){
+		tabOb.get(i).setId(i);
+	}
+	
 }
 public List<Ksiazka> getTabOb(){
 	for(int i = 0; i < tabOb.size(); i++)

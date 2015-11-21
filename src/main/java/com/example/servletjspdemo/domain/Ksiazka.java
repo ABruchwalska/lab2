@@ -1,6 +1,8 @@
 package com.example.servletjspdemo.domain;
 
 public class Ksiazka {
+
+private int id;
 private String tytul;
 private String autor;
 private String kategoria;
@@ -9,7 +11,8 @@ private int rokWydania;
 public Ksiazka(){
 
 }
-public Ksiazka(String tytul, String autor){
+public Ksiazka(int id, String tytul, String autor){
+	this.id = id;
 	this.tytul = tytul;
 	this.autor = autor;
 }
@@ -19,6 +22,13 @@ this.autor = autor;
 this.kategoria = kategoria;
 this.rokWydania = rokWydania;
 
+}
+public void setId(int id){
+	this.id = id;
+	}
+
+public int getId(){
+	return this.id;
 }
 public String getTytul(){
 return tytul;

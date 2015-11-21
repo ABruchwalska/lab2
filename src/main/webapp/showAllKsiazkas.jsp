@@ -12,11 +12,17 @@
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.KsiazkaStorage" scope="application" />
 <%
   for (Ksiazka ksiazka : storage.getTabOb()) {
-	  out.println("<p>Autor: " + ksiazka.getAutor() + "; Tytul: " + ksiazka.getTytul() + "</p>");
+	  out.print("<p> id: " +ksiazka.getId() +" Autor: " + ksiazka.getAutor() + "; Tytul: " + ksiazka.getTytul());
+	  out.print(" <a href=\"deleteKsiazka.jsp?id=" + ksiazka.getId() + "\" >Usun</a> ");
+	  out.print(" <a href=\"editKsiazka.jsp?id=" + ksiazka.getId() + "\" >Edytuj</a> ");
+	  out.print("</p>");
+	 
   }
+  //out.println(request.)
 %>
 <p>
   <a href="getPersonData.jsp">Dodaj inna ksiazke</a>
+ <!--  <a href="delete.jsp">Usun ksiazke</a> -->
 </p>
 
 </body>
