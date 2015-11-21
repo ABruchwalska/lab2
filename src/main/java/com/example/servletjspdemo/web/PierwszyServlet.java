@@ -2,6 +2,8 @@ package com.example.servletjspdemo.web;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,8 +22,14 @@ public class PierwszyServlet extends HttpServlet {
 		
 		response.setContentType("text/html");
 		
+		String currDate;
+
+		  DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+		  java.util.Date date = new java.util.Date();
+		  currDate = dateFormat.format(date);
+		  
 		PrintWriter out = response.getWriter();
-		out.println("<html><body><h2>Witamy w Ksiegarni! Dzisiaj jest " + new java.util.Date() + "</h2></body></html>");
+		out.println("<html><body><h2>Witamy w Ksiegarni! Dzisiaj jest " + currDate + "</h2></body></html>");
 		out.close();
 	}
 
