@@ -11,8 +11,8 @@
 
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.KsiazkaStorage" scope="application" />
 <%
-  for (Ksiazka ksiazka : tabOb.add(ksiazka)) {
-	  out.println("<p>Autor: " + Ksiazka.getAutor() + "; Tytul: " + Ksiazka.getTytul() + "</p>");
+  for (Ksiazka ksiazka : storage.getTabOb()) {
+	  out.println("<p>Autor: " + ksiazka.getAutor() + "; Tytul: " + ksiazka.getTytul() + "</p>");
   }
 %>
 <p>
