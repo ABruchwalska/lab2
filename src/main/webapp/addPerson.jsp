@@ -7,19 +7,19 @@
 <title>Ksiegarnia</title>
 </head>
 <body>
-<jsp:useBean id="Ksiazka" class="com.example.servletjspdemo.domain.Ksiazka" scope="session" />
+<jsp:useBean id="book" class="com.example.servletjspdemo.domain.Ksiazka" scope="session" />
 
-<jsp:setProperty name="Ksiazka" property="*" /> 
+<jsp:setProperty name="book" property="*" /> 
 
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.KsiazkaStorage" scope="application" />
 
 <% 
-  storage.dodajKsiazka(Ksiazka);
+  storage.dodajKsiazka(book);
 %>
 
 <p>Podana ksiazka zostala dodana do biblioteki: </p>
-<p>Autor: <jsp:getProperty name="Ksiazka" property="autor"></jsp:getProperty> </p>
-<p>Tytul: <jsp:getProperty name="Ksiazka" property="tytul"></jsp:getProperty></p>
+<p>Autor: <jsp:getProperty name="book" property="autor"></jsp:getProperty> </p>
+<p>Tytul: <jsp:getProperty name="book" property="tytul"></jsp:getProperty></p>
 <p>
   <a href="showAllKsiazkas.jsp">Pokaz wszystkie ksiazki</a>
 </p>

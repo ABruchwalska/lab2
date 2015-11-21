@@ -7,7 +7,11 @@ private String kategoria;
 private int rokWydania;
 
 public Ksiazka(){
-super();
+
+}
+public Ksiazka(String tytul, String autor){
+	this.tytul = tytul;
+	this.autor = autor;
 }
 public Ksiazka(String tytul, String autor, String kategoria, int rokWydania){
 this.tytul = tytul;

@@ -9,7 +9,7 @@
 <body>
 
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.KsiazkaStorage" scope="application" />
-<jsp:useBean id="Ksiazka" class="com.example.servletjspdemo.domain.Ksiazka" scope="session" />
+<jsp:useBean id="book" class="com.example.servletjspdemo.domain.Ksiazka" scope="session" />
 
 <form action="addPerson.jsp">
 

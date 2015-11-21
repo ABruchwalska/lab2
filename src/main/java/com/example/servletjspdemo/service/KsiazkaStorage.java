@@ -9,12 +9,17 @@ public ArrayList<Ksiazka> tabOb = new ArrayList<Ksiazka>();
 public KsiazkaStorage(){
 }
 public void dodajKsiazka(Ksiazka ksiazka){
-tabOb.add(ksiazka);
+	System.out.println(ksiazka);
+	tabOb.add(new Ksiazka(ksiazka.getTytul(),ksiazka.getAutor()));
 }
 public void usunPozycje(int pozycja){
 tabOb.remove(pozycja);
 }
 public List<Ksiazka> getTabOb(){
+	for(int i = 0; i < tabOb.size(); i++)
+	{
+	    System.out.println(tabOb.get(i));
+	}
 return tabOb;
 }
 }
