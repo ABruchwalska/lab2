@@ -18,7 +18,8 @@
 	 out.println("Autor :<input type=\"text\" value=\" "+ ksiazka.getAutor() + " \" name=\"autor\"/><br>");
 	 out.println("Tytul :<input type=\"text\" value=\" "+ ksiazka.getTytul() + " \" name=\"tytul\"/>");
 	%>
-
+	
+  <input type="hidden" name= "id" value="<%= ksiazka.getId() %>">
   <input type="submit" value=" OK ">
   
 </form>
