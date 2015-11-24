@@ -14,11 +14,11 @@
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.KsiazkaStorage" scope="application" />
 
 <% 
-  int id = Integer.parseInt(request.getParameter("id"));
-  String Tytul_nowy = request.getParameter("tytul");
-  String Autor_nowy = request.getParameter("autor");
-  storage.getTabOb().get(id).setTytul(Tytul_nowy);
-  storage.getTabOb().get(id).setAutor(Autor_nowy);
+  int id = Integer.parseInt(request.getParameter("id")); //wez z formularza parametr 'id' i zamien go na int
+  String Tytul_nowy = request.getParameter("tytul"); //wartosc parametru "tytul" przechowuj w zmiennej 'tytul_nowy' typu string
+  String Autor_nowy = request.getParameter("autor");// j.w.
+  storage.getTabOb().get(id).setTytul(Tytul_nowy); //wez wszystkie ksiazki-> zwroc mi ksiazke o id 'id'->ustaw jej tytul na 'tytul_nowy'
+  storage.getTabOb().get(id).setAutor(Autor_nowy);// j.w
 %>
 	<p>Zmodyfikowano ksiazke</p>
 	<p>
