@@ -14,7 +14,7 @@
 
 	<%
 	
-	 com.example.servletjspdemo.domain.Ksiazka ksiazka = storage.getTabOb().get(Integer.parseInt(request.getParameter("id")));
+	com.example.servletjspdemo.domain.Ksiazka ksiazka = storage.getTabOb().get(Integer.parseInt(request.getParameter("id")));
 	 out.println("Autor :<input type=\"text\" value=\" "+ ksiazka.getAutor() + " \" name=\"autor\"/><br>");
 	 out.println("Tytul :<input type=\"text\" value=\" "+ ksiazka.getTytul() + " \" name=\"tytul\"/>");
 	%>

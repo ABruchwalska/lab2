@@ -1,6 +1,8 @@
 <%@page import="com.example.servletjspdemo.domain.Ksiazka"%>
+<%@page import="java.util.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,22 +10,28 @@
 <title>Ksiegarnia</title>
 </head>
 <body>
-
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.KsiazkaStorage" scope="application" />
 <%
-  for (Ksiazka ksiazka : storage.getTabOb()) {
-	  out.print("<p> id: " +ksiazka.getId() +" Autor: " + ksiazka.getAutor() + "; Tytul: " + ksiazka.getTytul());
-	  out.print(" <a href=\"deleteKsiazka.jsp?id=" + ksiazka.getId() + "\" >Usun</a> ");
-	  out.print(" <a href=\"editKsiazka.jsp?id=" + ksiazka.getId() + "\" >Edytuj</a> ");
-	  out.print("</p>");
-	 
-  }
-  //out.println(request.)
+ArrayList<HashMap<String, String>> ksiazki = storage.getKsiazkiMap();
+pageContext.setAttribute("ksiazki", ksiazki);
 %>
+<table>
+<th>ID</th>
+<th>Tytul</th>
+<th>Autor</th>
+<th>Usun</th>
+<th>Edytuj</th>
+<c:forEach items="${ksiazki}" var="ksiazka">
+<tr>
+<td><c:out value="${ksiazka.id}"/></td>
+<td><c:out value="${ksiazka.tytul}"/></td>
+<td><c:out value="${ksiazka.autor}"/></td>
+<td><a href='deleteKsiazka.jsp?id=<c:out value="${ksiazka.id}" />'>Usun</td>
+<td><a href='editKsiazka.jsp?id=<c:out value="${ksiazka.id}" />'>Edit</td>
+</c:forEach>
+</table>
 <p>
-  <a href="getPersonData.jsp">Dodaj inna ksiazke</a>
- <!--  <a href="delete.jsp">Usun ksiazke</a> -->
+<a href="getPersonData.jsp">Dodaj inna ksiazke</a>
 </p>
-
 </body>
 </html>
