@@ -2,7 +2,7 @@
 <%@page import="java.util.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,8 +12,8 @@ pageEncoding="UTF-8"%>
 <body>
 <jsp:useBean id="storage" class="com.example.servletjspdemo.service.KsiazkaStorage" scope="application" />
 <%
-ArrayList<HashMap<String, String>> ksiazki = storage.getKsiazkiMap();
-pageContext.setAttribute("ksiazki", ksiazki);
+ArrayList list = storage.getKsiazkiMap();
+pageContext.setAttribute("ksiazki", list);
 %>
 <table>
 <th>ID</th>

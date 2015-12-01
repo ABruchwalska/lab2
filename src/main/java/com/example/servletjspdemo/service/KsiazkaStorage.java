@@ -8,7 +8,7 @@ public KsiazkaStorage(){
 public void dodajKsiazka(Ksiazka ksiazka){
 System.out.println(ksiazka);
 
-tabOb.add(new Ksiazka(ksiazka.getId(),ksiazka.getAutor(),ksiazka.getTytul()));
+tabOb.add(new Ksiazka(tabOb.size(),ksiazka.getAutor(),ksiazka.getTytul()));
 }
 public void usunPozycje(int pozycja){
 tabOb.remove(pozycja);
@@ -26,11 +26,11 @@ System.out.println(tabOb.get(i));
 }
 return tabOb;
 }
-	public ArrayList<HashMap<String, String>> getKsiazkiMap (){
-		ArrayList <HashMap<String, String>> hm = new ArrayList<HashMap<String, String>>();
+	public ArrayList getKsiazkiMap (){
+		ArrayList hm = new ArrayList();
 		for (int i=0; i<tabOb.size(); i++){
-			HashMap<String, String> km = new HashMap<String, String>();
-			km.put("id", tabOb.get(i).getId() + "");// konkatenuje go z pustym stringiem w celu rzutowania (int -> string)
+			Map km = new HashMap();
+			km.put("id", tabOb.get(i).getId());// konkatenuje go z pustym stringiem w celu rzutowania (int -> string)
 			km.put("tytul", tabOb.get(i).getTytul());
 			km.put("autor", tabOb.get(i).getAutor());
 		
